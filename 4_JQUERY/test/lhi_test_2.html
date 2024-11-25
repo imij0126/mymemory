@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>240821 test2</title>
+
+    <script src="lhi_test_2.js"></script>
+    <link rel="stylesheet" href="lhi_test_2.css">
+</head>
+
+<body>
+    <div class="join-form">
+        <form>
+            <div id="userInfo">
+
+            <div class="required">
+                <span>아이디</span>
+                <input type="text" id="userId" ><br>
+                <div class="message"></div>
+
+                <span>패스워드 </span>
+                <input type="password" id="userPw" onclick="pwMsg(); "><br>
+                <div class="message" id="pwdiv"></div>
+
+                <span>패스워드 확인</span>
+                <input type="text" id="pwConfirm" required><br>
+                <div class="message"></div>
+            </div>
+
+                <span>이메일</span>
+                <input type="email" id="email"><br>
+                <div class="message"></div>
+
+                <span>주소</span>
+                <input type="text" id="address">
+                <div class="message"></div>
+            </div>
+            <div id="btn-area">
+                <button type="submit" id="btn">가입</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const idEl = document.getElementById("userId");
+        const pwEl = document.getElementById("userPw");
+        const pwcfmEl = document.getElementById("pwConfirm");
+        const pwdivEl = document.getElementById("pwdiv");
+
+        function pwMsg() {
+            pwdivEl.innerHTML = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+        }
+
+        const loginList = document.getElementsByClassName("required");
+        const msgList = document.getElementsByClassName("message");
+
+        const emailEl = document.getElementById("email");
+        const addrEl = document.getElementById("address");
+        
+        // emailEl.onclick = function() {
+        //     for(let l of loginList) {
+        //         if(l.value == '') {
+        //             msgList.innerHTML = '필수 입력 항목입니다.';
+        // }
+    </script>
+</body>
+</html>

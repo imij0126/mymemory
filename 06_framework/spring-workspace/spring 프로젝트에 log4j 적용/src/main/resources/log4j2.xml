@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<configuration> 
+	<!-- 
+		* log4j 사이트 참고 (Manual 메뉴)
+	 -->
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd hh:mm:ss}%5p [%c] %m%n"/>
+        </Console>
+        
+		<File name="debug_log" fileName="/logs/debug.log"> 
+	      <PatternLayout pattern="%d{yyyy-MM-dd hh:mm:ss}%5p [%c] %m%n"/>
+	    </File>        
+    </Appenders>
+    
+    <loggers>
+        <logger name="com.kh.spring" level="debug">
+        	<AppenderRef ref="debug_log"/>
+        </logger>
+        <root level="warn">
+        	<AppenderRef ref="console" />
+        </root>
+    </loggers> 
+</configuration>

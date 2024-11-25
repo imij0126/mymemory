@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review_0806</title>
+
+    <style>
+        h1 { color: darkblue; }
+        fieldset { background-color: skyblue;}
+        input { background-color: antiquewhite; }
+        #join { width: 50%; background-color: darkblue; color: white;}
+    </style>
+</head>
+<body align="center">
+    <h1>KH 회원가입</h1>
+    <hr>
+    <form action="signUp">
+        <fieldset>
+            <input type="text" name="useId" placeholder=아이디 required><br><br>
+
+            <input type="password" name="userPwd" placeholder="비밀번호" required><br><br>
+
+            <input type="email" name="email" placeholder="[선택]이메일주소"><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <input type="text" id="userName" placeholder="이름"> <br><br>
+
+            <label for="birth">생년월일 : </label>
+            <input type="date" name="birth" id="birth"><br><br>
+
+            <select name="telecom">
+                <option value="kt">KT</option>
+                <option value="skt">SKT</option>
+                <option value="lg">LG</option>
+            </select>
+            <input type="tel" name="phone" placeholder="휴대전화번호">
+        </fieldset>
+        <br>
+        <input type="submit" value="회원 가입" id="join">
+
+    </form>
+    
+</body>
+</html>
